@@ -1,4 +1,9 @@
 <h1>Some useful Web developpement Glosssary</h1>
 <% @keywords.each do |keyword| %>
-  <%= keyword.title %>
+  <div>
+    <img src="<%= keyword.image_url %>" alt="<%= keyword.title %>">
+    <p><%= keyword.definition %></p>
+    <p><%= keyword.source_url %></p>
+  </div>
+  <p><%= keyword.title %></p>
 <% end %>
