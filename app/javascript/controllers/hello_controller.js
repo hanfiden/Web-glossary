@@ -1,18 +1,14 @@
-// Visit The Stimulus Handbook for more details 
-// https://stimulusjs.org/handbook/introduction
-// 
-// This example controller works with specially annotated HTML like:
-//
-// <div data-controller="hello">
-//   <h1 data-target="hello.output"></h1>
-// </div>
-
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = ["form", "list", "searchInput"]
 
-  connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!'
+  update() {
+    const url = `${this.formTarget.action}?query=${this.searchInputTarget.value}`
+    fetch(url, { headers: { 'Accept': 'text/plain' } })
+      .then(response => response.text())
+      .then((data) => {
+        this.listTarget.outerHTML = data;
+      })
   }
 }
