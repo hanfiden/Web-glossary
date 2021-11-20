@@ -1,0 +1,16 @@
+<div data-refresh-list-target="list">
+  <% if params[:query].blank? %>
+    <h1 class="h3"><%= pluralize keywords.count, 'keyword' %> available</h1>
+  <% else %>
+    <h1 class="h3"><%= pluralize keywords.count, 'result' %> for <code><%= params[:query] %></code></h1>
+  <% end %>
+
+  <div class="keywords">
+    <% keywords.each do |keyword| %>
+      <div class="keyword-card">
+        <%# <%= image_tag keyword.image_url %> %>
+        <h2><%= keyword.title %> <small>"<%= keyword.definition %>"</small></h2>
+      </div>
+    <% end %>
+  </div>
+</div>
