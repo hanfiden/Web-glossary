@@ -8,7 +8,7 @@
   <div class="keywords">
     <% keywords.each do |keyword| %>
       <div class="keyword-card">
-        <%# <%= image_tag keyword.image_url %> %>
+        <%= image_tag "https://drive.google.com/uc?export=view&id=#{keyword.image_url}" %>
         <h2><%= keyword.title %> <small>"<%= keyword.definition %>"</small></h2>
         <a href="<%= keyword.source_url %>" target="_blank">Source</a>
       </div>
