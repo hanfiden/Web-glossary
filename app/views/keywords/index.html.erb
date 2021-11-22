@@ -13,6 +13,9 @@
                             refresh_list_target: 'searchInput',
                             action: "keyup->refresh-list#update"
                           } %>
+          <%= button_tag(class: "btn btn-primary") do %>
+            <i class="fa fa-search"></i>
+          <% end %>
         <% end %>
         <%= render 'list', keywords: @keywords %>
       </div>
