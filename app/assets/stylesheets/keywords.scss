@@ -72,7 +72,7 @@
       p {
         font-size: 0.9125rem;
         line-height: 160%;
-        color: #999;
+        color: rgb(189, 188, 188);
       }
     }
 }
@@ -105,4 +105,38 @@
 
 .keyword-form:focus{
   color: #007bff;
+}
+
+.stick-bar{
+  position: sticky;
+  top: 10px;
+  z-index: 999;
+}
+//****************** MEDIA QUERY ******************//
+@media screen and (max-width: 320px)
+{
+  .flip {
+    width: 250px;
+    .front,
+    .back{
+      height: 300px;
+    }
+  }
+  .keyword-form{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 375px)
+{
+  .flip {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 540px)
+{
+  .keyword-form{
+    width: 80%;
+  }
 }
