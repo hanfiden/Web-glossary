@@ -127,16 +127,30 @@
   }
 }
 
-@media screen and (min-width: 375px)
+@media screen and (min-width: 360px)
 {
   .flip {
     width: 300px;
   }
 }
 
-@media screen and (max-width: 540px)
+@media screen and (min-width: 769px)
+{
+  .flip {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 990px)
 {
   .keyword-form{
-    width: 80%;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1000px)
+{
+  .keyword-form{
+    width: 30%;
   }
 }
