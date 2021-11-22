@@ -1,13 +1,22 @@
 @import "bootstrap/scss/bootstrap";
+@import "keywords";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-html{
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
+  font-weight: normal;
 }
 
-body{
-  margin: 0;
-  padding: 0;
+body {
+  color: #555;
+  background: #222;
+  text-align: center;
+  font-family: 'Roboto Mono';
+  padding: 1em;
+}
+
+h1 {
+  font-size: 2.2em;
 }
 
 a{

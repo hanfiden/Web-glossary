@@ -5,12 +5,17 @@
     <h1 class="h3"><%= pluralize keywords.count, 'result' %> for <code><%= params[:query] %></code></h1>
   <% end %>
 
-  <div class="keywords">
+  <div class="keyword-cards">
     <% keywords.each do |keyword| %>
-      <div class="keyword-card">
-        <%= image_tag "https://drive.google.com/uc?export=view&id=#{keyword.image_url}" %>
-        <h2><%= keyword.title %> <small>"<%= keyword.definition %>"</small></h2>
-        <a href="<%= keyword.source_url %>" target="_blank">Source</a>
+      <div class="flip">
+        <div class="front" style="background-image: url(https://drive.google.com/uc?export=view&id=#{keyword.image_url})">
+          <h1 class="text-shadow"><%= keyword.title %></h1>
+        </div>
+        <div class="back">
+          <h2><%= keyword.title %></h2>
+          <p><%= keyword.definition %></p>
+          <p><a href="<%= keyword.source_url %>" target="_blank">Source</a></p>
+        </div>
       </div>
     <% end %>
   </div>
