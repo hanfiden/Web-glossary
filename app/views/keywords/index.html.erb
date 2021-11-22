@@ -6,14 +6,14 @@
       <div data-controller="refresh-list">
         <%= form_with url: keywords_path, method: :get, html: { class: 'mb-5', data: { refresh_list_target: 'form' } } do |f| %>
           <%= f.text_field :query,
-                           class: "form-control",
+                           class: "keyword-form",
                            placeholder: 'Type a keyword',
                            value: params[:query],
                            data: {
                             refresh_list_target: 'searchInput',
                             action: "keyup->refresh-list#update"
                           } %>
-          <%= button_tag(class: "btn btn-primary") do %>
+          <%= link_to do %>
             <i class="fa fa-search"></i>
           <% end %>
         <% end %>
