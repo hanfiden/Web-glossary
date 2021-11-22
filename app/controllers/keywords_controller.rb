@@ -14,13 +14,4 @@ class KeywordsController < ApplicationController
       format.text { render partial: 'list.html', locals: { keywords: @keywords } }
     end
   end
-
-  # def index
-  #   if params[:query].present?
-  #     sql_query = "title ILIKE :query OR definition ILIKE :query"
-  #     @keywords = Keyword.where(sql_query, query: "%#{params[:query]}%")
-  #   else
-  #     @keywords = Keyword.all
-  #   end
-  # end
 end
