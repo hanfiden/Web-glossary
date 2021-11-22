@@ -134,6 +134,13 @@
   }
 }
 
+@media screen and (min-width: 769px)
+{
+  .flip {
+    width: 350px;
+  }
+}
+
 @media screen and (max-width: 540px)
 {
   .keyword-form{
