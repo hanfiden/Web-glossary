@@ -8,13 +8,11 @@
   <div class="keyword-cards">
     <% keywords.each do |keyword| %>
       <div class="flip">
-        <div class="front" style="background-image: url(https://drive.google.com/uc?export=view&id=#{keyword.image_url})">
-          <h1 class="text-shadow"><%= keyword.title %></h1>
-        </div>
+        <%= content_tag(:div, content_tag(:h1, keyword.title, class: "text-shadow"), class: "front",
+        style: "background-image: url(https://drive.google.com/uc?export=view&id=#{keyword.image_url})") %>
         <div class="back">
-          <h2><%= keyword.title %></h2>
           <p><%= keyword.definition %></p>
-          <p><a href="<%= keyword.source_url %>" target="_blank">Source</a></p>
+          <p class="source-link"><a href="<%= keyword.source_url %>" target="_blank">Source</a></p>
         </div>
       </div>
     <% end %>
