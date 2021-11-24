@@ -84,12 +84,24 @@
   border-radius: 30px;
 }
 
-.source-link{
+.source-link,
+.edit-link,
+.delete-link{
   position: absolute;
-  bottom: 0;
-  left: 25%;
+  bottom: 5px;
 }
 
+.edit-link{
+  left:15px;
+}
+
+.source-link{
+  left: 42%;
+}
+
+.delete-link{
+  right:15px;
+}
 //****************** FORM STYLE ******************//
 
 
