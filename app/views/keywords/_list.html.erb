@@ -13,6 +13,16 @@
         <div class="back">
           <p><%= keyword.definition %></p>
           <p class="source-link"><a href="<%= keyword.source_url %>" target="_blank">Source</a></p>
+          <% if user_signed_in? %>
+            <%= link_to edit_keyword_path(keyword), method: :get do %>
+            <i class="fas fa-edit"></i>
+            <% end %>
+            <%= link_to keyword_path(keyword),
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          <% end %>
         </div>
       </div>
     <% end %>
