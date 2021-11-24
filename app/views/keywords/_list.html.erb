@@ -12,17 +12,21 @@
         style: "background-image: url(https://drive.google.com/uc?export=view&id=#{keyword.image_url})") %>
         <div class="back">
           <p><%= keyword.definition %></p>
-          <p class="source-link"><a href="<%= keyword.source_url %>" target="_blank">Source</a></p>
-          <% if user_signed_in? %>
-            <%= link_to edit_keyword_path(keyword), method: :get do %>
-            <i class="fas fa-edit"></i>
+          <div class="d-flex justify-content-between source-link">
+            <% if user_signed_in? %>
+              <%= link_to edit_keyword_path(keyword), method: :get, class: 'mr-5' do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
             <% end %>
-            <%= link_to keyword_path(keyword),
-              method: :delete,
-              data: { confirm: "Are you sure?" } do %>
-              <i class="fas fa-trash"></i>
+            <p><a href="<%= keyword.source_url %>" target="_blank">Source</a></p>
+            <% if user_signed_in? %>
+              <%= link_to keyword_path(keyword),
+                method: :delete,
+                data: { confirm: "Are you sure?" }, class: 'ml-5' do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
       </div>
     <% end %>
