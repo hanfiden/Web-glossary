@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col">
       <div data-controller="refresh-list">
-        <%= form_with url: keywords_path, method: :get, html: { class: 'mb-5 stick-bar', data: { refresh_list_target: 'form' } } do |f| %>
+        <%= form_with url: keywords_path, method: :get, html: { class: 'mb-5 stick-bar', data: { refresh_list_target: 'form' }, autocomplete: "off" } do |f| %>
           <% if user_signed_in? %>
             <%= link_to new_keyword_path, method: :get, class: 'mr-2' do%>
               <i class="fas fa-plus-square fa-lg"></i>
@@ -20,6 +20,7 @@
                            class: "keyword-form",
                            placeholder: 'Type a keyword',
                            value: params[:query],
+                           autocomplete: "off",
                            data: {
                             refresh_list_target: 'searchInput',
                             action: "keyup->refresh-list#update"
@@ -28,7 +29,7 @@
             <i class="fa fa-search"></i>
           <% end %>
         <% end %>
-        <%= render 'list', keywords: @keywords %>
+        <%= render 'keyword', keywords: @keywords %>
       </div>
     </div>
   </div>
