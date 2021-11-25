@@ -7,6 +7,7 @@
 
   <div class="keyword-cards">
     <% keywords.each do |keyword| %>
+      <% content_for :meta_description, "#{keyword.title} - " %>
       <div class="flip">
         <%= content_tag(:div, content_tag(:h1, keyword.title, class: "text-shadow"), class: "front",
         style: "background-image: url(https://drive.google.com/uc?export=view&id=#{keyword.image_url})") %>
