@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :keywords, except: [:show]
 
   constraints(host: /^(?!www\.)/i) do
-    get '(*any)' => redirect { |params, request|
+    get '(*any)' => redirect { |_params, request|
       URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
     }
   end
