@@ -3,7 +3,7 @@ class KeywordsController < ApplicationController
   before_action :set_keyword, only: %i[edit update destroy]
 
   def index
-    @keywords = Keyword.all
+    @keywords = Keyword.order(:title)
 
     if params[:query].present?
       sql_query = 'title ILIKE :query OR definition ILIKE :query'
