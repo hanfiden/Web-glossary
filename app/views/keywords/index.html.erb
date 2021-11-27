@@ -25,9 +25,6 @@
                             refresh_list_target: 'searchInput',
                             action: "keyup->refresh-list#update"
                           } %>
-          <%= link_to do %>
-            <i class="fa fa-search"></i>
-          <% end %>
         <% end %>
         <%= render 'list', keywords: @keywords %>
       </div>
