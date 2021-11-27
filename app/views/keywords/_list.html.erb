@@ -19,7 +19,7 @@
                 <i class="fas fa-edit"></i>
               <% end %>
             <% end %>
-            <p><a href="<%= keyword.source_url %>" target="_blank" class="source-link">Source</a></p>
+            <p><a href="<%= keyword.source_url %>" target="_blank" class="source-link">Read more</a></p>
             <% if user_signed_in? %>
               <%= link_to keyword_path(keyword),
                 method: :delete,

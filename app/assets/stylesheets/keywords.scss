@@ -78,10 +78,8 @@
 }
 
 .text-shadow {
-  background-color: rgba(250, 246, 246, 0.01);
-  position: absolute;
-  backdrop-filter: blur(3px);
-  border-radius: 30px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .source-link,
@@ -96,7 +94,7 @@
 }
 
 .source-link{
-  left: 42%;
+  left: 40%;
 }
 
 .delete-link{
