@@ -9,7 +9,7 @@
     <% keywords.each do |keyword| %>
       <% content_for :meta_description, "#{keyword.title} - " %>
       <div class="flip">
-        <%= content_tag(:div, content_tag(:h1, keyword.title, class: "text-shadow"), class: "front",
+        <%= content_tag(:div, content_tag(:h2, keyword.title, class: "text-shadow"), class: "front",
         style: "background-image: linear-gradient(
                 rgba(0, 0, 0, 0.7),
                 rgba(0, 0, 0, 0.1)),
