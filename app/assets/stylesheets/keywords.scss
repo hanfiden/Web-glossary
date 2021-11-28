@@ -5,6 +5,7 @@
   color: #999;
   margin-bottom: 3rem;
 }
+
 //****************** CARD STYLE ******************//
 
 .flip {
@@ -58,6 +59,9 @@
     margin-right: 2px;
     margin-bottom: 1em;
     width: 350px;
+    h2 {
+      font-size: 2.2em;
+    }
     >.front,
     >.back {
       display: block;
@@ -101,11 +105,13 @@
   right:15px;
 }
 //****************** FORM STYLE ******************//
-
+.fa-plus:hover{
+  transform: scale(1.2);
+}
 
 .keyword-form{
   width: 25%;
-  border-right: none;
+  border: none;
   padding: 5px;
   height: 35px;
   border-radius: 5px;
@@ -122,6 +128,111 @@
   top: 10px;
   z-index: 999;
 }
+
+//****************** HEADER ******************//
+
+
+
+
+
+
+//****************** FOOTER ******************//
+.footer{
+  padding-top: 2rem;
+}
+
+.footer__container{
+  display: flex;
+  justify-content: space-between;
+  line-height: 2rem;
+}
+
+.footer__bg{
+  background-color: rgb(21, 21, 21);
+  padding: 2rem 0 2rem;
+}
+
+.footer__title{
+  color: #FFF;
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  h1{
+    font-size: 1.5rem;
+  }
+}
+
+.footer__copy{
+  text-align: center;
+  color: rgb(197, 197, 197);
+  margin: 2rem 2rem 0 2rem;
+}
+
+.footer__source{
+  display: flex;
+  margin-right: 2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  a {
+    color: white;
+  }
+  a:hover{
+    background-color: rgba(80, 79, 74, 0.75);;
+  }
+}
+/*========== SCROLL UP ==========*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  opacity: .5;
+  bottom: -20%;
+  padding: 0 .3rem;
+  z-index: 9999;
+  transition: .4s;
+}
+
+.scrollup:hover{
+  transform:scale(1.3);
+  opacity: 1;
+}
+
+.scrollup__icon{
+  font-size: 1.5rem;
+  color: white;
+}
+/* Show scroll */
+.show-scrollup{
+  bottom: 5rem;
+}
+
+/*========== SCROLL DOWN ==========*/
+.scroll-down{
+  position: fixed;
+  right: 1rem;
+  opacity: .5;
+  bottom: -20%;
+  padding: 0 .3rem;
+  z-index: 9999;
+  transition: .4s;
+  transform: rotate(180deg);
+}
+
+.scroll-down:hover{
+  transform:scale(1.3);
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.scrolldown__icon{
+  font-size: 1.5rem;
+  color: white;
+}
+/* Show scroll */
+.show-scrolldown{
+  bottom: 3rem;
+}
+
+
 //****************** MEDIA QUERY ******************//
 @media screen and (max-width: 320px)
 {
@@ -197,5 +308,11 @@
   }
   .keyword-form{
     width: 30%;
+  }
+  .footer__title{
+    margin-left: 17rem;
+  }
+  .footer__source{
+    margin-right: 17rem;
   }
 }

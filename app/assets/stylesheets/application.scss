@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-weight: normal;
   z-index: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,11 +16,6 @@ body {
   background: #222;
   text-align: center;
   font-family: 'Roboto Mono';
-  padding: 1em;
-}
-
-h1 {
-  font-size: 2.2em;
 }
 
 a{
