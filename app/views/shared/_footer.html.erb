@@ -5,7 +5,13 @@
         <h1>HAN Fiden</h1>
         <span>Developper Full-Stack Ruby on Rails</span>
       </div>
-      <br>
+
+      <% if user_signed_in? %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'sign-in-link' %>
+      <% else %>
+        <%= link_to "Only for admin", new_user_session_path, class: 'sign-in-link' %>
+      <% end %>
+
       <div class="footer__source">
         <a href="https://hanfiden.github.io/hanfiden/" target="_blank">My Portfolio</a>
         <a href="https://codepen.io/Aoyue/pen/pLJqgE" target="_blank">Flip card</a>
