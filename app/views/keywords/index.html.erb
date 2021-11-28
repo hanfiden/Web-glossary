@@ -13,7 +13,7 @@
         <%= form_with url: keywords_path, method: :get, html: { class: 'mb-5 stick-bar', data: { refresh_list_target: 'form' }, autocomplete: "off" } do |f| %>
           <% if user_signed_in? %>
             <%= link_to new_keyword_path, method: :get, class: 'mr-2' do%>
-              <i class="fas fa-plus-square fa-lg"></i>
+              <i class="fas fa-plus fa-lg"></i>
             <% end %>
           <% end %>
           <%= f.text_field :query,
