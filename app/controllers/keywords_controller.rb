@@ -38,7 +38,7 @@ class KeywordsController < ApplicationController
 
   def destroy
     @keyword.destroy
-    redirect_to keywords_path
+    redirect_back(fallback_location: keywords_path)
   end
 
   private
