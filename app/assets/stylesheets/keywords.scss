@@ -185,11 +185,11 @@
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--first-color);
+  background-color: white;
   opacity: .8;
   padding: 0 .3rem;
   border-radius: .4rem;
-  z-index: var(--z-tooltip);
+  z-index: 9999;
   transition: .4s;
 }
 
@@ -284,5 +284,11 @@
   }
   .keyword-form{
     width: 30%;
+  }
+  .footer__title{
+    margin-left: 17rem;
+  }
+  .footer__source{
+    margin-right: 17rem;
   }
 }
