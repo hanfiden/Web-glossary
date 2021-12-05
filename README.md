@@ -1,25 +1,8 @@
-# README
+App: https://webglossary.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website content the following functionnalities:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# web_glossary
+Create Read Update Delete (CRUD)
+Progressive Web App
+AJAX with stimulusJS
+Devise gem for users
