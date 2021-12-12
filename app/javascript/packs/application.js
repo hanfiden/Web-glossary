@@ -24,8 +24,17 @@ document.addEventListener('turbolinks:load', () => {
 
   function scrollDown() {
     const scrollDown = document.getElementById('scroll-down');
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) scrollDown.classList.remove('show-scrolldown'); else scrollDown.classList.add('show-scrolldown')
+    if (window.scrollY <= 250) scrollDown.classList.remove('show-scrolldown'); else scrollDown.classList.add('show-scrolldown')
     scrollDown.onclick = function () { window.scrollTo(0, document.body.scrollHeight); };
   }
   window.addEventListener('scroll', scrollDown)
+
+  function scrollSmoothTo() {
+  const element = document.getElementById('formSearch');
+    element.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth'
+    });
+  }
+  window.addEventListener('onclick', scrollSmoothTo)
 });
