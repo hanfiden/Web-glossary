@@ -28,4 +28,13 @@ document.addEventListener('turbolinks:load', () => {
     scrollDown.onclick = function () { window.scrollTo(0, document.body.scrollHeight); };
   }
   window.addEventListener('scroll', scrollDown)
+
+  function scrollSmoothTo() {
+  const element = document.getElementById('formSearch');
+    element.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth'
+    });
+  }
+  window.addEventListener('onclick', scrollSmoothTo)
 });

@@ -129,14 +129,90 @@
 }
 
 //****************** HEADER ******************//
-.header__title{
-  padding: 5rem 2rem 3rem 2rem;
-  color: aliceblue;
+.header{
+  background-color: #222;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.words {
+  padding: auto 2rem auto 2rem;
+  font-family: "Archivo Black", sans-serif;
+  color: #222;
+  font-size: 0;
+  line-height: 1.5;
+}
 
+.words span {
+  font-size: 5rem;
+  display: inline-block;
+  animation: move 3s ease-in-out infinite;
+}
 
+@keyframes move {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: translate(30%, 0);
+  }
+}
 
+.words span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.words span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.words span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.words span:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.words span:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.words span:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.words span:nth-child(8) {
+  animation-delay: 3.5s;
+}
+
+.scroll-toForm{
+  font-size: 1.5rem;
+  padding-top: 20rem;
+  animation: slide 0.7s linear infinite;
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 5px);
+  }
+}
 
 //****************** FOOTER ******************//
 .footer{
@@ -289,6 +365,13 @@
     h2 {
       font-size: 1.5rem;
     }
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .words span {
+  font-size: 3rem;
   }
 }
 
