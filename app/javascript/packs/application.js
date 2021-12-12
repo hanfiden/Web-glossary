@@ -28,14 +28,4 @@ document.addEventListener('turbolinks:load', () => {
     scrollDown.onclick = function () { window.scrollTo(0, document.body.scrollHeight); };
   }
   window.addEventListener('scroll', scrollDown)
-
-  function scrollToTarget() {
-
-    var element = document.getElementById('targetElement');
-    element.scrollIntoView({
-      block: "start",
-      behavior: "smooth",
-    });
-  }
-  window.addEventListener('onclick', scrollToTarget)
 });
