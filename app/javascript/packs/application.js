@@ -29,12 +29,13 @@ document.addEventListener('turbolinks:load', () => {
   }
   window.addEventListener('scroll', scrollDown)
 
-  function scrollSmoothTo() {
-  const element = document.getElementById('formSearch');
+  function scrollToTarget() {
+
+    var element = document.getElementById('targetElement');
     element.scrollIntoView({
-      block: 'start',
-      behavior: 'smooth'
+      block: "start",
+      behavior: "smooth",
     });
   }
-  window.addEventListener('onclick', scrollSmoothTo)
+  window.addEventListener('onclick', scrollToTarget)
 });
