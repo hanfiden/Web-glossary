@@ -17,7 +17,7 @@ ActiveStorage.start()
 document.addEventListener('turbolinks:load', () => {
   function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
-    if (this.scrollY >= 560) scrollUp.classList.add('show-scrollup'); else scrollUp.classList.remove('show-scrollup')
+    if (this.scrollY >= 250) scrollUp.classList.add('show-scrollup'); else scrollUp.classList.remove('show-scrollup')
     scrollUp.onclick = function () { window.scrollTo(0, 0); };
   }
   window.addEventListener('scroll', scrollUp)
