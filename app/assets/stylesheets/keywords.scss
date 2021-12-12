@@ -136,6 +136,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .words {
@@ -194,9 +195,11 @@
 
 .scroll-toForm{
   font-size: 1.5rem;
-  padding-top: 20rem;
+  position: absolute;
+  bottom: 30px;
   animation: slide 0.7s linear infinite;
   opacity: 0.5;
+  color: rgb(177, 177, 177);
   &:hover{
     opacity: 1;
     cursor: pointer;
