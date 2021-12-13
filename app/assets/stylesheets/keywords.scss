@@ -130,19 +130,20 @@
 
 //****************** HEADER ******************//
 .header{
-  background-color: #222;
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 5rem;
 }
 
 .words {
   padding: auto 2rem auto 2rem;
   font-family: "Archivo Black", sans-serif;
-  color: #222;
+  color: rgb(255, 255, 255);
   font-size: 0;
   line-height: 1.5;
 }
@@ -198,7 +199,7 @@
   position: absolute;
   bottom: 30px;
   animation: slide 0.8s linear infinite;
-  color: rgb(177, 177, 177);
+  color: rgb(141, 141, 141);
   &:hover{
     cursor: pointer;
   }
