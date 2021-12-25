@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .h3{
   color: #999;
   margin-bottom: 3rem;
@@ -129,77 +131,38 @@
 }
 
 //****************** HEADER ******************//
-.header{
-  background-color: rgb(255, 255, 255);
+header {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  position: relative;
-  margin-bottom: 5rem;
-}
+  max-width: 100vw;
+  padding-top: 10rem;
+  padding-bottom: 1rem;
 
-.words {
-  padding: auto 2rem auto 2rem;
-  font-family: "Archivo Black", sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 0;
-  line-height: 1.5;
-}
-
-.words span {
-  font-size: 5rem;
-  display: inline-block;
-  animation: move 3s ease-in-out infinite;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(-2%, -2%);
+  h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(24px + 5vw);
+    background: linear-gradient(-45deg, #4bc0c8 25%, #feac5e 25%, #feac5e 50%, #4bc0c8 50%, #4bc0c8 75%, #feac5e 75%, #feac5e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 20px 20px;
+    background-position: 0 0;
+    animation: stripes 1s linear infinite;
   }
-  50% {
-    text-shadow: 0px 5px 20px rgba(255, 255, 255, 0.6), 5px 10px 10px rgba(243, 233, 85, 0.8), 10px 15px 10px rgba(81, 238, 61, 0.8), 15px 20px 10px rgba(44, 73, 235, 0.8), 20px 25px 10px rgba(226, 44, 235, 0.8), 25px 30px 10px rgba(243, 59, 59, 0.8);
-  }
+}
+
+@keyframes stripes {
   100% {
-    transform: translate(2%, 2%);
+    background-position: 20px 0, 20px 0, 20px 0;
   }
-}
-
-.words span:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.words span:nth-child(3) {
-  animation-delay: 1s;
-}
-
-.words span:nth-child(4) {
-  animation-delay: 1.5s;
-}
-
-.words span:nth-child(5) {
-  animation-delay: 2s;
-}
-
-.words span:nth-child(6) {
-  animation-delay: 2.5s;
-}
-
-.words span:nth-child(7) {
-  animation-delay: 3s;
-}
-
-.words span:nth-child(8) {
-  animation-delay: 3.5s;
 }
 
 .scroll-toForm{
   font-size: 1.5rem;
-  position: absolute;
-  bottom: 30px;
   animation: slide 0.8s linear infinite;
   color: rgb(141, 141, 141);
+  align-self: flex-end;
   &:hover{
     cursor: pointer;
   }
