@@ -306,7 +306,7 @@ header {
   }
 }
 
-@media screen and (min-width: 360px)
+@media screen and (min-width: 280px)
 {
   .flip {
     width: 300px;
@@ -333,6 +333,9 @@ header {
     h2 {
       font-size: 1.5rem;
     }
+  }
+  .source-link{
+    left: 38%;
   }
 }
 
