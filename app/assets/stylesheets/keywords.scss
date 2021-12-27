@@ -159,7 +159,8 @@ header {
 }
 
 .scroll-toForm{
-  font-size: 1.5rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: calc(14px + 1vw);
   animation: slide 0.8s linear infinite;
   color: rgb(141, 141, 141);
   align-self: flex-end;
