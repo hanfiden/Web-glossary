@@ -5,4 +5,4 @@ This website content the following functionnalities:
 Create Read Update Delete (CRUD)\
 Progressive Web App\
 AJAX with stimulusJS\
-Devise gem for users\
+Devise gem for users
