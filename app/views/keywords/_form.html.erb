@@ -1,4 +1,4 @@
-<%= simple_form_for(@keyword) do |f| %>
+<%= simple_form_for(@keyword, html: { class: "container mt-5 pt-5"}) do |f| %>
   <%= f.input :title %>
   <%= f.input :image_url %>
   <%= f.input :definition, maxlength: '250' %>
